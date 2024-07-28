@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -40,6 +41,37 @@ class _LoginState extends State<Login> {
     email.dispose();
     password.dispose();
     super.dispose();
+  }
+
+  Future<UserCredential> signInWithFacebook() async {
+    try {
+      // Trigger the sign-in flow
+      final LoginResult loginResult = await FacebookAuth.instance.login();
+
+      // Check for error in login result
+      if (loginResult.status == LoginStatus.success) {
+        // Create a credential from the access token
+        final OAuthCredential facebookAuthCredential =
+            FacebookAuthProvider.credential(
+                loginResult.accessToken!.tokenString);
+        Get.offAll(CityPage());
+        // Once signed in, return the UserCredential
+        return await FirebaseAuth.instance
+            .signInWithCredential(facebookAuthCredential);
+      } else {
+        print('Facebook login failed: ${loginResult.status}');
+        throw FirebaseAuthException(
+          code: 'ERROR_FACEBOOK_LOGIN_FAILED',
+          message: loginResult.message,
+        );
+      }
+    } catch (e) {
+      print('Error during Facebook login: $e');
+      throw FirebaseAuthException(
+        code: 'ERROR_FACEBOOK_LOGIN_FAILED',
+        message: e.toString(),
+      );
+    }
   }
 
   Future<UserCredential> signInWithGoogle() async {
@@ -251,16 +283,32 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 20.h),
                 Text('تسجيل باستخدام'),
                 SizedBox(height: 10.h),
-                InkWell(
-                  onTap: () async {
-                    await signInWithGoogle();
-                    Get.offAll(CityPage());
-                  },
-                  child: SizedBox(
-                    width: 50.w,
-                    height: 50.h,
-                    child: Image.asset("images/google-symbol.png"),
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: () async {
+                        await signInWithFacebook();
+                      },
+                      child: SizedBox(
+                        width: 50.w,
+                        height: 50.h,
+                        child: Image.asset(
+                            "https://freepnglogo.com/images/all_img/1713419057Facebook_PNG.png"),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () async {
+                        await signInWithGoogle();
+                        Get.offAll(CityPage());
+                      },
+                      child: SizedBox(
+                        width: 50.w,
+                        height: 50.h,
+                        child: Image.asset("images/google-symbol.png"),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

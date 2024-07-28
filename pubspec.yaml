@@ -1,5 +1,5 @@
 name: dalel
-description: "A new Flutter project."
+description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -20,6 +20,10 @@ dependencies:
   google_sign_in: ^6.2.1
   carousel_slider: ^4.2.1
   url_launcher: ^6.3.0
+  flutter_svg: ^2.0.10+1
+  firebase_messaging: ^15.0.3
+  flutter_facebook_auth: ^7.0.1
+  rive_common: ^0.4.10
 
 dev_dependencies:
   flutter_test:
@@ -31,3 +35,4 @@ flutter:
 
   assets:
     - images/
+    - assets/

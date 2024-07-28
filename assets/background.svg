@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="430" height="932" viewBox="0 0 430 932">
+  <defs>
+    <clipPath id="clip-iPhone_14_Pro_Max_1">
+      <rect width="430" height="932"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_14_Pro_Max_1" data-name="iPhone 14 Pro Max – 1" clip-path="url(#clip-iPhone_14_Pro_Max_1)">
+    <rect width="430" height="932" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1">
+      <g id="Layer_2" data-name="Layer 2" transform="matrix(-1, -0.017, 0.017, -1, 972.111, 878.641)">
+        <g id="OBJECTS" transform="matrix(1, -0.017, 0.017, 1, 450.296, -88.654)">
+          <path id="Path_1" data-name="Path 1" d="M227.731,555.559c180.281-125.7,264.8-275.2,304.421-388.018L531.67,62.624c-.066-16.078-5.681-31.523-15.609-42.933S492.708,1.845,478.742,1.8L58.064.1C25.893-.031-.048,29.889.122,66.926L4.077,925.837C33.549,787,97.518,646.39,227.731,555.559Z" transform="translate(55.613 0.756)" fill="#2b86e6"/>
+        </g>
+      </g>
+      <g id="Layer_2-2" data-name="Layer 2" transform="translate(-37.778 -33.377)">
+        <g id="OBJECTS-2" data-name="OBJECTS" transform="translate(0)">
+          <path id="Path_4" data-name="Path 4" d="M281.426,0H64.643A64.643,64.643,0,0,0,0,64.643V262.81A452.858,452.858,0,0,1,65.561,219.68C159.488,168.849,233.138,76.158,281.426,0Z" transform="translate(0)" fill="#2b86e6"/>
+        </g>
+      </g>
+      <g id="Layer_2-3" data-name="Layer 2" transform="matrix(0.999, 0.035, -0.035, 0.999, -431.217, 376.081)">
+        <g id="OBJECTS-3" data-name="OBJECTS" transform="translate(374.506 -356.288) rotate(-3)">
+          <path id="Path_2" data-name="Path 2" d="M201.814,390.449C349.343,300.886,455.532,116.826,508.566,7.74V0C456.662,107.819,349.8,296.4,200.2,387.2,118.612,436.373,49.672,508.259,0,595.949v6.85c49.584-89.341,119.165-162.554,201.814-212.35Z" fill="#2b86e6"/>
+        </g>
+      </g>
+      <g id="Layer_2-4" data-name="Layer 2" transform="matrix(0.995, -0.105, 0.105, 0.995, -83.584, 78.074)">
+        <g id="OBJECTS-4" data-name="OBJECTS">
+          <path id="Path_5" data-name="Path 5" d="M258.724,446.212C447.856,343.857,583.989,133.511,651.978,8.846V0C585.438,123.217,448.443,338.729,256.65,442.493A692.372,692.372,0,0,0,0,681.06v7.828A688.536,688.536,0,0,1,258.725,446.211Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

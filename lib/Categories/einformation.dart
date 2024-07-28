@@ -112,8 +112,6 @@ class _InformationState extends State<Information> {
     }
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,12 +161,7 @@ class _InformationState extends State<Information> {
                             leading:
                                 Icon(Icons.call, color: Colors.greenAccent),
                             title: GestureDetector(
-                              child: Text(
-                                  "${_infoData?['phonenum'] ?? 'غير متوفر...'}"),
-                            ),
-                            subtitle: Text(
-                              "رقم الهاتف للاتصال المباشر",
-                              style: TextStyle(color: Colors.grey),
+                              child: Text("اضغط للاتصال"),
                             ),
                           ),
                         ),
@@ -189,12 +182,7 @@ class _InformationState extends State<Information> {
                                   "https://img.icons8.com/?size=100&id=16713&format=png&color=000000"),
                             ),
                             title: GestureDetector(
-                              child: Text(
-                                  _infoData?['whatsnum'] ?? 'غير متوفر...'),
-                            ),
-                            subtitle: Text(
-                              "رقم الواتس اب المباشر",
-                              style: TextStyle(color: Colors.grey),
+                              child: Text("اضغط للانتقال للواتس اب"),
                             ),
                           ),
                         ),
@@ -217,7 +205,6 @@ class _InformationState extends State<Information> {
                           ),
                         ),
                       ),
-                    
                       Card(
                         elevation: 0,
                         margin: EdgeInsets.symmetric(vertical: 8.h),
@@ -244,12 +231,6 @@ class _InformationState extends State<Information> {
                             title: GestureDetector(
                               child: Text('حساب الانستغرام'),
                             ),
-                            subtitle: Text(
-                              _infoData?['insta'] != null
-                                  ? _infoData!['insta']
-                                  : 'غير متوفر...',
-                              style: TextStyle(color: Colors.grey),
-                            ),
                           ),
                         ),
                       ),
@@ -270,12 +251,6 @@ class _InformationState extends State<Information> {
                             ),
                             title: GestureDetector(
                               child: Text('حساب الفيسبوك '),
-                            ),
-                            subtitle: Text(
-                              _infoData?['facebook'] != null
-                                  ? _infoData!['facebook']
-                                  : 'غير متوفر...',
-                              style: TextStyle(color: Colors.grey),
                             ),
                           ),
                         ),
