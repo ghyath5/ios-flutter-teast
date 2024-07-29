@@ -9,16 +9,14 @@ import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-  await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyDzK0zVJZ2bZ8YYgHJer3Ohn5dyYcfchYU",
-      appId: "1:272902468976:android:5c2709210a8f22afa00bb5",
-      messagingSenderId: "272902468976",
-      projectId: "dalel-cbd9c",
-    ),
-  );
+  // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+//  options: const FirebaseOptions(
+//       apiKey: "AIzaSyDzK0zVJZ2bZ8YYgHJer3Ohn5dyYcfchYU",
+//       appId: "1:272902468976:android:5c2709210a8f22afa00bb5",
+//       messagingSenderId: "272902468976",
+//       projectId: "dalel-cbd9c",
+//     ),
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -37,7 +35,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _requestPermissions();
-    _subscribeToTopic(); 
+    _subscribeToTopic();
   }
 
   Future<void> _subscribeToTopic() async {
